@@ -6,4 +6,4 @@ from .models import Guest
 class RSVPForm(forms.ModelForm):
     class Meta:
         model = Guest
-        fields = ['attending', 'guest_count']
+        fields = ['attending', 'guests_count']

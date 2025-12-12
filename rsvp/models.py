@@ -5,11 +5,10 @@ import uuid
 
 ### Guest table for RSVP form
 class Guest(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField(blank=True, null=True)
+    group_name = models.CharField(max_length=100)
     attending = models.BooleanField(default=False)
     guests_count = models.PositiveIntegerField(default=1)
     code = models.UUIDField(default=uuid.uuid4, unique=True)
 
     def __str__(self):
-        return self.name
+        return self.group_name
