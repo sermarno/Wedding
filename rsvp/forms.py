@@ -1,9 +1,9 @@
 from django import forms
-from .models import Guest
+from .models import GuestGroup
 
 # user display form
 
 class RSVPForm(forms.ModelForm):
     class Meta:
-        model = Guest
+        model = GuestGroup
         fields = ['attending', 'guests_count']

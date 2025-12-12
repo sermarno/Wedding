@@ -4,7 +4,7 @@ import uuid
 # Create your models here.
 
 ### Guest table for RSVP form
-class Guest(models.Model):
+class GuestGroup(models.Model):
     group_name = models.CharField(max_length=100)
     attending = models.BooleanField(default=False)
     guests_count = models.PositiveIntegerField(default=1)
