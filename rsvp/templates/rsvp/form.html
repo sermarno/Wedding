@@ -1,0 +1,7 @@
+<h1>Hello, {{ guest.name }}!</h1>
+<p>Please confirm your RSVP below:</p>
+
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
