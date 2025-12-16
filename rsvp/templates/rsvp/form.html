@@ -1,7 +1,25 @@
-<h1>Hello, {{ group.group_name }}!</h1>
-<p>Please confirm your RSVP below:</p>
+{% load static %}
+<link rel="stylesheet" href="{% static 'rsvp/style.css' %}" />
 
-<form method="post" action="{% url 'rsvp' code=group.code %}">
-  {% csrf_token %} {{ form.as_p }}
-  <button type="submit">Submit</button>
-</form>
+<div class="container">
+  <h1 class="welcome">We look forward to seeing you {{ group.group_name }}!</h1>
+
+  <p class="rsvp">Please RSVP by April 17th, 2026</p>
+
+  <form method="post" action="{% url 'rsvp' code=group.code %}">
+    {% csrf_token %}
+
+    <p>{{ form.email.label_tag }} {{ form.email }}</p>
+    <p>{{ form.attending.label_tag }}</p>
+    <div class="radio-group">
+      {% for radio in form.attending %}
+      <label>{{ radio.tag }} {{ radio.choice_label }}</label>
+      {% endfor %}
+    </div>
+
+    <p>{{ form.guests_count.label_tag }} {{ form.guests_count }}</p>
+    <p>{{ form.guest_names.label_tag }} {{ form.guest_names }}</p>
+
+    <button type="submit">Submit RSVP</button>
+  </form>
+</div>

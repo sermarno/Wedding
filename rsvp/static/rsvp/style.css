@@ -1,0 +1,98 @@
+body {
+  font-family: "Playfair Display", serif;
+  font-size: xx-large;
+  color: #333;
+
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Image Background */
+  background-image: url("berra1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background-color: rgba(128, 128, 128, 0.8);
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.welcome {
+  margin: 1em;
+  font-style: normal;
+}
+
+.rsvp {
+  font-size: 28px;
+}
+
+/* Form container */
+form {
+  margin: 2em;
+  font-size: xx-large;
+}
+
+p {
+  line-height: 2;
+}
+
+/* Form elements */
+form p {
+  font-size: xx-large;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  padding: 0.5rem;
+  font-size: xx-large;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: rgb(156, 156, 156);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Radio buttons for attending */
+.form-radio input[type="radio"] {
+  transform: scale(1.2);
+  margin-right: 0.5rem;
+}
+
+/* Submit button */
+button {
+  background-color: #ea9886;
+  color: white;
+  font-size: xx-large;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #a44f2e;
+}
+
+.radio-group {
+  text-align: left;
+  margin-left: 0;
+}
+
+.radio-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
