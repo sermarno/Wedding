@@ -96,3 +96,18 @@ button:hover {
   display: block;
   margin-bottom: 0.5rem;
 }
+
+.submit_section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.submit_section button {
+  margin-bottom: 0.5rem;
+}
+
+.submit_section p {
+  font-size: 0.9em;
+  color: #494949;
+  margin: 0;
+}

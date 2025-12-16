@@ -1,2 +1,11 @@
-<h1>Thank you, {{ group.group_name }}!</h1>
-<p>Your RSVP has been recorded!</p>
+{% load static %}
+<link rel="stylesheet" href="{% static 'rsvp/style.css' %}" />
+
+<div class="container">
+  <h1 class="welcome">Thank you for your RSVP!</h1>
+
+  <p>Your attendance has been recorded. Ben and Serra have been notified.</p>
+  <p>You can update your RSVP anytime by clicking the RSVP button.</p>
+
+  <a href="{% url 'home' %}"><button type="button">Go Home</button></a>
+</div>
